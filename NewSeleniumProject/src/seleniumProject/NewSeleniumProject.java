@@ -31,7 +31,7 @@ public class NewSeleniumProject {
          * the result as "Passed" or "Failed"
          */
         if (actualTitle.contentEquals(expectedTitle)){
-            System.out.println("Test Passed!"+actualTitle);
+            System.out.println("Test Passed!!!"+actualTitle);
         } else {
             System.out.println("Test Failed");
         }
