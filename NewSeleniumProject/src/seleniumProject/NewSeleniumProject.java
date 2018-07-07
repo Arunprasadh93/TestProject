@@ -1,12 +1,15 @@
 package seleniumProject;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NewSeleniumProject {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.chrome.driver", "D://chromedriver_win32/chromedriver.exe");
@@ -36,6 +39,14 @@ public class NewSeleniumProject {
             System.out.println("Test Failed");
         }
         driver.get("file:///D:/submitresume.html");
+        
+        WebElement clickupload = driver.findElement(By.xpath("//input[@name=\"uploadResume\"]"));
+        clickupload.click();
+        Thread.sleep(3000);
+        Runtime.getRuntime().exec("D:\\AutoIT\\uploadfile.exe");
+        
+        Thread.sleep(5000);
+      //input[@name="uploadResume"]
        //driver.findElement(By.id(""));
         //close Fire fox
         driver.close();
