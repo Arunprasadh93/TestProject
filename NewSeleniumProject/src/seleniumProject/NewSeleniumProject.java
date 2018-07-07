@@ -14,7 +14,7 @@ public class NewSeleniumProject {
 		//comment the above 2 lines and uncomment below 2 lines to use Chrome
 		//System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-    	
+		driver.manage().window().maximize();
         String baseUrl = "https://www.google.com";
         String expectedTitle = "Google";
         String actualTitle = "";
@@ -22,10 +22,10 @@ public class NewSeleniumProject {
         
         // launch Fire fox and direct it to the Base URL
         driver.get(baseUrl);
-        driver.manage().window().maximize();
+        
         // get the actual value of the title
         actualTitle = driver.getTitle();
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
         /*
          * compare the actual title of the page with the expected one and print
          * the result as "Passed" or "Failed"
