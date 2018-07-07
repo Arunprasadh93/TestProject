@@ -35,10 +35,12 @@ public class NewSeleniumProject {
         } else {
             System.out.println("Test Failed");
         }
+        driver.get("file:///D:/submitresume.html");
        //driver.findElement(By.id(""));
         //close Fire fox
         driver.close();
-       
+        //driver.get("file:///D:/submitresume.html");
+        //driver.close();
     }
 }
 
